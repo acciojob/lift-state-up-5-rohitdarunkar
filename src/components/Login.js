@@ -1,6 +1,6 @@
 import React from "react";
 
-const Login = ({ isLoggedIn, onLogin }) => {
+const Login = ({ onLogin }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     onLogin();
@@ -8,13 +8,19 @@ const Login = ({ isLoggedIn, onLogin }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Login Form</h2>
+      <h1>Parent Component</h1>
 
-      <input type="text" placeholder="Username" required />
-      <br /><br />
+      <label>Username: </label>
+      <input type="text" placeholder="Name" required />
 
-      <input type="password" placeholder="Password" required />
-      <br /><br />
+      <br />
+      <br />
+
+      <label>Password: </label>
+      <input type="password" required />
+
+      <br />
+      <br />
 
       <button type="submit">Login</button>
     </form>
